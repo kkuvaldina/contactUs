@@ -38,7 +38,6 @@ export const ContactUsForm = () => {
       emailInput.reportValidity();
     } else {
       emailInput.setCustomValidity("");
-      emailInput.reportValidity();
     }
     setEmail(e.target.value);
   };
@@ -71,12 +70,12 @@ export const ContactUsForm = () => {
           emailConsent,
         }
       )
-      .then((response) => {
+      .then(() => {
         setSuccess(true);
         setError(false);
         handleClearButton();
       })
-      .catch((error) => {
+      .catch(() => {
         setError(true);
         setSuccess(false);
       });
