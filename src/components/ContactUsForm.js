@@ -145,12 +145,14 @@ export const ContactUsForm = () => {
           header="Form submission failed"
           content="There was a problem submitting the form"
         />
-        <Button secondary onClick={handleClearButton}>
-          Clear
-        </Button>
-        <Button primary disabled={!isFormValid} type="submit">
-          Submit
-        </Button>
+        <div className="buttons">
+          <Button secondary onClick={handleClearButton}>
+            Clear
+          </Button>
+          <Button primary disabled={!isFormValid} type="submit">
+            Submit
+          </Button>
+        </div>
       </Form>
     </Segment>
   );
